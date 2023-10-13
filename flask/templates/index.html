@@ -1,0 +1,219 @@
+{%extends 'layout/base.html' %}
+
+{% block content%}
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4 mx-6 my-8 bg-white rounded-lg shadow-lg p-6 border border-gray-200">
+    <div class="col-span-full md:col-span-6">
+
+        <div id="indicators-carousel" class="relative w-full" data-carousel="static">
+            <!-- Carousel wrapper -->
+            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                    <img src="https://cdn2.cellphones.com.vn/x/media/catalog/product/v/n/vn_iphone_15_pro_blue_titanium_pdp_image_position-1a_blue_titanium_color.jpg"
+                        class="absolute block w-full h-full object-contain -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        alt="...">
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="https://cdn2.cellphones.com.vn/x/media/catalog/product/v/n/vn_iphone_15_pro_blue_titanium_pdp_image_position-3_design_detail.jpg"
+                        class="absolute block w-full h-full object-contain -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        alt="...">
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="https://cdn2.cellphones.com.vn/x/media/catalog/product/v/n/vn_iphone_15_pro_blue_titanium_pdp_image_position-2_design.jpg"
+                        class="absolute block w-full h-full object-contain -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        alt="...">
+                </div>
+            </div>
+            <!-- Slider indicators -->
+            <div class="absolute z-30 flex space-x-3 -translate-x-1/2 top-full left-1/2">
+                <button type="button" class="w-16 h-16 bg-gray-600 rounded-lg" aria-current="true" aria-label="Slide 1"
+                    data-carousel-slide-to="0">
+                    <img src="https://cdn2.cellphones.com.vn/x/media/catalog/product/v/n/vn_iphone_15_pro_blue_titanium_pdp_image_position-1a_blue_titanium_color.jpg"
+                        class="object-cover w-full h-full rounded-lg" alt="...">
+                </button>
+                <button type="button" class="w-16 h-16 bg-gray-600 rounded-lg" aria-current="false" aria-label="Slide 2"
+                    data-carousel-slide-to="1">
+                    <img src="https://cdn2.cellphones.com.vn/x/media/catalog/product/v/n/vn_iphone_15_pro_blue_titanium_pdp_image_position-3_design_detail.jpg"
+                        class="object-cover w-full h-full rounded-lg" alt="..."></button>
+                <button type="button" class="w-16 h-16 bg-gray-600 rounded-lg" aria-current="false" aria-label="Slide 3"
+                    data-carousel-slide-to="2">
+                    <img src="https://cdn2.cellphones.com.vn/x/media/catalog/product/v/n/vn_iphone_15_pro_blue_titanium_pdp_image_position-2_design.jpg"
+                        class="object-cover w-full h-full rounded-lg" alt="...">
+                </button>
+            </div>
+            <!-- Slider controls -->
+            <button type="button"
+                class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-prev>
+                <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 1 1 5l4 4" />
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button"
+                class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-next>
+                <span
+                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 9 4-4-4-4" />
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+        </div>
+        <div class="w-full h-16"></div>
+
+    </div>
+    <div class="col-span-full md:col-span-6">
+        <h1 class="text-3xl font-bold">Điện thoại iPhone 15</h1>
+        <h2 class="text-blue-600 mt-2 text-lg">21.990.000đ</h2>
+        <div class="flex gap-3 mt-3">
+            <label for="ip128gb" class="">
+                <input checked id="ip128gb" type="radio" name="gb" value="128GB" class="hidden peer" />
+                <div
+                    class="inline-block border border-gray-200 bg-white rounded-md p-3 peer-checked:border-blue-600 cursor-pointer">
+                    128GB
+                </div>
+
+            </label>
+            <label for="ip256b" class="">
+                <input id="ip256b" type="radio" name="gb" value="256B" class="hidden peer" />
+                <div
+                    class="inline-block border border-gray-200 bg-white rounded-md p-3 peer-checked:border-blue-600 cursor-pointer">
+                    256B
+                </div>
+
+            </label>
+            <label for="ip512b" class="">
+                <input id="ip512b" type="radio" name="gb" value="512B" class="hidden peer" />
+                <div
+                    class="inline-block border border-gray-200 bg-white rounded-md p-3 peer-checked:border-blue-600 cursor-pointer">
+                    512B
+                </div>
+
+            </label>
+        </div>
+        <h3 class="mt-3 font-bold">Mô tả:</h3>
+        <div class="mt-1 text-gray-500">
+            Đặc điểm nổi bật của iPhone 15:
+            <p>• Sử dụng kiểu hình notch Dynamic Island</p>
+            <p>• Ra mắt với 5 phiên bản màu sắc và được làm từ kính pha màu</p>
+            <p>• Sử dụng Chip A16 Bionic cho hiệu năng vượt trội</p>
+            <p>• Trang bị camera chính 48 MP, Telephoto 2x cho khả năng chụp ảnh sắc nét</p>
+            <p>• Màn hình OLED Super Retina XDR cho chất lượng đồ họa lý tưởng</p>
+            <p>• Hỗ trợ sẵn hệ điều hành iOS 17 mới nhất 2023</p>
+        </div>
+    </div>
+
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-5 mx-6 my-8">
+    <div class="col-span-8 bg-white p-5 rounded-lg border border-gray-200 shadow-lg">
+        <h4 class="font-bold">Bình luận</h4>
+
+        <form class="mt-3">
+            <label for="my-comment" class="sr-only">Your comment</label>
+            <div class="flex gap-3 items-center rounded-lg">
+                <textarea id="my-comment" rows="1" 
+                    class="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="..."></textarea>
+                <button type="button" onClick="sendComment()"
+                    class="inline-flex justify-center p-2 text-blue-600 rounded-full cursor-pointer hover:bg-blue-100">
+                    <svg class="w-5 h-5 rotate-90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 18 20">
+                        <path
+                            d="m17.914 18.594-8-18a1 1 0 0 0-1.828 0l-8 18a1 1 0 0 0 1.157 1.376L8 18.281V9a1 1 0 0 1 2 0v9.281l6.758 1.689a1 1 0 0 0 1.156-1.376Z" />
+                    </svg>
+                    <span class="sr-only">Send comment</span>
+                </button>
+            </div>
+        </form>
+
+        <div id="comment-container">
+            <div class="comment flex gap-4 my-3">
+                <div class="w-fit rounded-full">
+                    <img class="w-8 h-8 my-2 rounded-full object-cover"
+                        src="https://img.myloview.com/murals/default-avatar-profile-icon-vector-social-media-user-symbol-image-700-244492311.jpg" />
+                </div>
+                <div class="grow">
+                    <h3 class="text-sm font-bold">user123</h3>
+                    <p>
+                        Good!
+                    </p>
+                </div>
+            </div>
+            <div class="comment flex gap-4 my-3">
+                <div class="w-fit rounded-full">
+                    <img class="w-8 h-8 my-2 rounded-full object-cover"
+                        src="https://img.myloview.com/murals/default-avatar-profile-icon-vector-social-media-user-symbol-image-700-244492311.jpg" />
+                </div>
+                <div class="grow">
+                    <h3 class="text-sm font-bold">user</h3>
+                    <p>
+                        Not bad!
+                    </p>
+                </div>
+            </div>
+            <div class="comment flex gap-4 my-3">
+                <div class="w-fit rounded-full">
+                    <img class="w-8 h-8 my-2 rounded-full object-cover"
+                        src="https://img.myloview.com/murals/default-avatar-profile-icon-vector-social-media-user-symbol-image-700-244492311.jpg" />
+                </div>
+                <div class="grow">
+                    <h3 class="text-sm font-bold">user_322</h3>
+                    <p>
+                        Bad!
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="col-span-4 bg-white p-5 rounded-lg border border-gray-200 shadow-lg">
+        <h4 class="font-bold">Các sản phẩm khác</h4>
+
+    </div>
+
+
+</div>
+
+{% endblock %}
+{% block jsExtra %}
+<script>
+    const sendComment = () => {
+        const cmtInput = document.querySelector("#my-comment");
+        if (!cmtInput.value)
+            alert("Vui lòng nhập bình luận!");
+        else {
+            let html = `
+            <div class="comment flex gap-4 my-3">
+                <div class="w-fit rounded-full">
+                    <img class="w-8 h-8 my-2 rounded-full object-cover"
+                        src="https://img.myloview.com/murals/default-avatar-profile-icon-vector-social-media-user-symbol-image-700-244492311.jpg" />
+                </div>
+                <div class="grow">
+                    <h3 class="text-sm font-bold">${"current-user"}</h3>
+                    <p>
+                        ${cmtInput.value}
+                    </p>
+                </div>
+            </div>
+            `
+
+            const cmtContainer = document.querySelector("#comment-container");
+            cmtContainer.insertAdjacentHTML("afterbegin", html);
+            cmtInput.value= "";
+        }
+    }
+</script>
+{% endblock %}
