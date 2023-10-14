@@ -123,7 +123,7 @@
         <form class="mt-3">
             <label for="my-comment" class="sr-only">Your comment</label>
             <div class="flex gap-3 items-center rounded-lg">
-                <textarea id="my-comment" rows="1" 
+                <textarea id="my-comment" rows="1"
                     class="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                     placeholder="..."></textarea>
                 <button type="button" onClick="sendComment()"
@@ -195,14 +195,28 @@
         if (!cmtInput.value)
             alert("Vui lòng nhập bình luận!");
         else {
-            let html = `
+            fetch('/api/predict', {
+                method: 'POST',
+                body: JSON.stringify({
+                    "comment": cmtInput.value,
+                }),
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    let html = `
             <div class="comment flex gap-4 my-3">
                 <div class="w-fit rounded-full">
                     <img class="w-8 h-8 my-2 rounded-full object-cover"
                         src="https://img.myloview.com/murals/default-avatar-profile-icon-vector-social-media-user-symbol-image-700-244492311.jpg" />
                 </div>
                 <div class="grow">
-                    <h3 class="text-sm font-bold">${"current-user"}</h3>
+                    <div class="flex justify-between">
+                        <h3 class="text-sm font-bold">${"current-user"}</h3>
+                        <div class="text-xs">${data[0].label + ' ' + data[0].score}</div>
+                    </div>
                     <p>
                         ${cmtInput.value}
                     </p>
@@ -210,9 +224,15 @@
             </div>
             `
 
-            const cmtContainer = document.querySelector("#comment-container");
-            cmtContainer.insertAdjacentHTML("afterbegin", html);
-            cmtInput.value= "";
+                    const cmtContainer = document.querySelector("#comment-container");
+                    cmtContainer.insertAdjacentHTML("afterbegin", html);
+                    cmtInput.value = "";
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+
+
         }
     }
 </script>
